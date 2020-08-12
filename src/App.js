@@ -9,10 +9,10 @@ function App() {
   async function getData() {
     const key="zD%2B5S1HIVi5RfD%2FvZ0AKwZduqAYQAjJ%2B%2FlQnIsVCYmaRmd0F%2BtMEjmvtU3NrhxcSdkUuzkhPZynYNKyM3Ya6Aw%3D%3D"
     try{
-      const data = await Axios.get(`http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=${key}`);
-      console.log(data.data);
-      // const needData = data.data.response.body.items.item;
-      // setCountryData(needData);
+      const data = await Axios.get(`/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=${key}`);
+      const needData = data.data.response.body.items.item;
+      console.log(needData);
+      setCountryData(needData);
     }catch(e){
       console.error(e);
     }
