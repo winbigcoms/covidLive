@@ -10,11 +10,3 @@ module.exports = function(app) {
         { target: 'http://api.marktube.tv' ,changeOrigin: true}
     ));
 }
-// "proxy": {
-//     "/openapi": {
-//       "target": "http://openapi.data.go.kr"
-//     },
-//     "/v1": {
-//       "target": "http://api.marktube.tv"
-//     }
-//   },
