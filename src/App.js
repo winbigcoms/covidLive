@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import MemoKoreaMap from './KoreaMap';
+import MemoKorea2 from './component/Korea2';
 
 function App() {
   const [countryData,setCountryData] = useState([]);
@@ -32,7 +32,7 @@ function App() {
   },[])
   return (
     <div className="App">
-      <MemoKoreaMap width={700} height={1000} useData={useData}/>
+      <MemoKorea2 width={600} height={800} useData={useData}/>
     </div>
   );
 }
