@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.prefix__land
+{
+  fill: #CCCCCC;
+  fill-opacity: 1;
+  stroke:white;
+  stroke-opacity: 1;
+  stroke-width:0.5;
+}
+.prefix__land:hover {
+  stroke: aqua;
+}
+.low{
+  fill: rgb(235, 121, 121);
+}
+.mid{
+  fill: rgb(248, 56, 56);
+}
+.high{
+  fill: rgb(248, 0, 0);
+}
