@@ -1,9 +1,9 @@
 // @flow
 import React from 'react';
-export function SigninPage() {
+export function NotFoundPage() {
   return (
     <div>
-      로그인페이지
+      낫 파운드
     </div>
   );
 };

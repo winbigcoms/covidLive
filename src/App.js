@@ -1,39 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
-import MemoKorea2 from './component/Korea2';
+import React from 'react';
+import ErrorBoundary from 'antd/lib/alert/ErrorBoundary';
+import { ConnectedRouter } from 'connected-react-router';
+import { Route, Switch } from 'react-router-dom';
+import { history } from './redux/create';
+import { HomePage } from './page/HomePage';
+import { NotFoundPage } from './page/NotFoundPage';
+import { SigninPage } from './page/SigninPage';
+import { ErrorPage } from './page/ErrorPage';
 
 function App() {
-  const [countryData,setCountryData] = useState([]);
-  const [useData,setUseData] = useState([]);
-  
-  async function getData() {
-    const key="zD%2B5S1HIVi5RfD%2FvZ0AKwZduqAYQAjJ%2B%2FlQnIsVCYmaRmd0F%2BtMEjmvtU3NrhxcSdkUuzkhPZynYNKyM3Ya6Aw%3D%3D"
-    try{
-      const data = await Axios.get(`/openapi/service/rest/Covid19/getCovid19SidoInfStateJson?serviceKey=${key}&startCreateDt=20200812`);
-      const needData = data.data.response.body.items.item;
-      let total = needData[18];
-      needData.shift();
-      needData.pop();
-      const useDatas = needData.map((data)=>{
-        return ({
-          gubun:data.gubunEn,
-          defCnt:data.defCnt,
-          percent : parseFloat(data.defCnt/total.defCnt*100).toFixed(2)
-        })
-      })
-      setUseData(useDatas);
-      setCountryData(needData);
-    }catch(e){
-      console.error(e);
-    }
-  }
-  useEffect(()=>{
-    getData()
-  },[])
+
   return (
-    <div className="App">
-      <MemoKorea2 width={600} height={800} useData={useData}/>
-    </div>
+    <ErrorBoundary FallbackComponent={ErrorPage}>
+      <ConnectedRouter history={history}>
+        <Switch>
+          <Route path="/signin" component={SigninPage}/>
+          <Route path="/" exact component={HomePage}/>
+          <Route component={NotFoundPage}/>
+        </Switch>
+      </ConnectedRouter>
+    </ErrorBoundary>
   );
 }
 

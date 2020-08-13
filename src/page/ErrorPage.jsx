@@ -1,9 +1,9 @@
 // @flow
 import React from 'react';
-export function SigninPage() {
+export function ErrorPage() {
   return (
     <div>
-      로그인페이지
+      에러낫대요
     </div>
   );
 };
