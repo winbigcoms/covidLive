@@ -1,4 +1,6 @@
 .sign_body {
+  margin: 0;
+  padding: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -8,9 +10,12 @@
   background-size: cover;
 }
 form {
+  box-sizing: border-box;
   width: 400px;
   height: 100vh;
-  margin: 100px auto;
+  margin: 0px auto;
+  padding-top: 200px;
+  
 }
 
 .h1 {
@@ -44,15 +49,18 @@ form {
 }
 
 .sign_btn {
+  border-radius: 10px;
+  font-weight: 700;
   display: block;
   margin: 20px auto;
   width: 120px;
   height: 40px;
-  background-color: rgb(188, 201, 207);
+  background-color: rgb(233, 240, 243);
 }
 
 .sign_input {
   display: block;
   margin: 0 auto;
   width: 300px;
+  border-radius: 5px;
 }
