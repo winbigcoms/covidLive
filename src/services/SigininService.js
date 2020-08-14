@@ -12,4 +12,12 @@ export default class SigninService {
     console.log(response)
     return response.data.token
   }
+
+  static async logout(token) {
+    await axios.delete(API_URL, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+  }
 }
