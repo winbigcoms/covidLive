@@ -29,17 +29,17 @@ code {
   stroke: aqua;
 }
 .low{
-  fill: rgb(159, 159, 165);
+  fill: rgb(255, 162, 162);
 }
 .lowMid{
-  fill: rgb(81, 81, 88);
+  fill: rgb(253, 114, 114);
 }
 .mid{
-  fill: rgb(154, 149, 235);
+  fill: rgb(245, 128, 128);
 }
 .midHigh{
-  fill: rgb(76, 164, 204);
+  fill: rgb(255, 67, 67);
 }
 .high{
-  fill: rgb(44, 80, 238);
+  fill: rgb(255, 0, 0);
 }

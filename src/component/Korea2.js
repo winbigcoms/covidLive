@@ -3,7 +3,6 @@ import styles from "../styles/koreaMap.module.scss";
 function Korea2({width,height,covidData,total,getCovidData,setSelect}) {
   // const {width,height,useData} = props;
   const svg = useRef(null);
-
   useEffect(()=>{
     getCovidData();
   },[getCovidData]);
