@@ -94,12 +94,15 @@ export const loginThunk = (email, password, history) => {
 
 }
 
-export const logoutThunk = (dispatch, token, history) => {
-  return async (dispatch, token) => {
+export const logoutThunk = (dispatch, history) => {
+  return async (dispatch) => {
     try{
-      dispatch(logout())
+      const token = localStorage.getItem('token')
+      console.log('로그아웃떵크',token)
+     
       TokenService.remove()
       SigninService.logout(token)
+      dispatch(logout())
       history.push('/signin')
     } catch (error) {
       console.log(error)

@@ -7,16 +7,16 @@ import { logoutThunk } from '../redux/modules/auth';
 import { useHistory } from 'react-router-dom';
 
 export function HeaderContainer() {
-  const nickName = useSelector((state) => state.authReducer.nickName);
-  const token = useSelector((state) => state.authReducer.nickName)
+  const nickName = useSelector((state) => state.authReducer.nickname);
+  const token = useSelector((state) => state.authReducer.token)
   const history = useHistory();
-  console.log('컨테이너', token)
-  console.log('컨테이너', nickName)
+  console.log('컨테이너 토큰', token)
+  console.log('컨테이너 닉네임', nickName)
   const dispatch = useDispatch();
   const logout = useCallback(()=> {
    
-    dispatch(logoutThunk(dispatch, token, history))
-  },[dispatch, token, history])
+    dispatch(logoutThunk(dispatch, history))
+  },[dispatch, history])
   return (
     <HeaderComponent nickName={nickName} logout={logout}/>
   );
