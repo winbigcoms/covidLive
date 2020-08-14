@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,700&display=swap');
+
+.table{
+  width: 600px;
+  height: 650px;
+  transform: scale(0.8);
+  border-radius: 15px;
+  border-collapse: collapse;
+  font-family: 'Roboto', sans-serif;
+}
+thead tr{
+  background-color: #ddd;
+  height: 60px;
+}

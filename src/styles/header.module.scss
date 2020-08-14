@@ -1,0 +1,21 @@
+.header{
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid red;
+  height: 80px;
+  .HeaderNavigation{
+    display: flex;
+  }
+  span{
+    img{
+      height: 79px;
+    }
+  }
+}
