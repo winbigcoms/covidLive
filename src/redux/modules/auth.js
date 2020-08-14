@@ -13,11 +13,11 @@ function loginStart() {
   }
 }
 
-function loginSuccess(token, nickname) {
+function loginSuccess(token, nickName) {
   return {
     type : LOGIN_SUCCESS,
     token,
-    nickname
+    nickName
   }
 }
 
@@ -41,7 +41,7 @@ const initialState = {
   token: null,
   loding: false,
   error: null,
-  nickname: null
+  nickName: null
 }
 
 export default function authReducer (state = initialState, action) {
@@ -51,28 +51,28 @@ export default function authReducer (state = initialState, action) {
         token: null,
         loading: true,
         error: null,
-        nickname: null,
+        nickName: null,
       }
     case LOGIN_SUCCESS :
       return {
         token: action.token,
         loading: true,
         error: null,
-        nickname: action.nickname,
+        nickName: action.nickname,
       }
     case LOGIN_FAIL :
       return {
         token: null,
         loading: false,
         error: action.error,
-        nickname: null,
+        nickName: null,
       }
     case LOGOUT :
       return {
         token: null,
         loading: false,
         error: null,
-        nickname: null,
+        nickName: null,
       }
     default:
       return state;
@@ -93,7 +93,6 @@ export const loginThunk = (email, password, history) => {
       dispatch(loginFail(error))
     }
   }
-
 }
 
 export const logoutThunk = (history) => {

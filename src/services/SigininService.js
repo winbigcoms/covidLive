@@ -13,6 +13,7 @@ export default class SigninService {
   }
 
   static async logout(token) {
+
     await axios.delete(API_URL, {
       headers: {
         Authorization: `Bearer ${token}`,
