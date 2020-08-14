@@ -1,6 +1,6 @@
 export default class TokenService {
-  static save(token, email) {
-    const nickName = email.split('@')[0];
+  static save(token, nickName) {
+    // const nickName = email.split('@')[0];
     localStorage.setItem('token', token);
     localStorage.setItem('nickName', nickName)
   }

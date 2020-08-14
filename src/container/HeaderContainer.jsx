@@ -7,7 +7,7 @@ import { logoutThunk } from '../redux/modules/auth';
 import { useHistory } from 'react-router-dom';
 
 export function HeaderContainer() {
-  const nickName = useSelector((state) => state.authReducer.nickName);
+  const nickName = useSelector((state) => state.authReducer.nickname);
   const history = useHistory();
 
   const dispatch = useDispatch();
