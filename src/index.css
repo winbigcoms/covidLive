@@ -1,45 +1,44 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.root{
+.root {
   position: relative;
   width: 100%;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.prefix__land
-{
+.prefix__land {
   cursor: pointer;
-  fill: #CCCCCC;
+  fill: #cccccc;
   fill-opacity: 1;
-  stroke:white;
+  stroke: white;
   stroke-opacity: 1;
-  stroke-width:0.5;
+  stroke-width: 0.5;
   transition: all 2s;
 }
 .prefix__land:hover {
   stroke: aqua;
 }
-.low{
-  fill: rgb(159, 159, 165);
+.low {
+  fill: rgba(255, 0, 0, 0.2);
 }
-.lowMid{
-  fill: rgb(81, 81, 88);
+.lowMid {
+  fill: rgba(255, 0, 0, 0.4);
 }
-.mid{
-  fill: rgb(154, 149, 235);
+.mid {
+  fill: rgba(255, 0, 0, 0.6);
 }
-.midHigh{
-  fill: rgb(76, 164, 204);
+.midHigh {
+  fill: rgba(255, 0, 0, 0.8);
 }
-.high{
-  fill: rgb(44, 80, 238);
+.high {
+  fill: rgba(255, 0, 0, 1);
 }
