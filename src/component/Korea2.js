@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styles from "../styles/koreaMap.module.scss";
-function Korea2({width,height,covidData,total,getCovidData}) {
+function Korea2({width,height,covidData,total,getCovidData,setSelect}) {
   // const {width,height,useData} = props;
   const svg = useRef(null);
 
@@ -36,12 +36,12 @@ function Korea2({width,height,covidData,total,getCovidData}) {
   },[covidData, total])
 
   function click(e){
-    console.log(e.target.id);
+    setSelect(e.target.id);
   }
 
 
   return (
-    <svg className={styles.koreaMap} width={width} height={height} ref={svg} onClick={click}>
+    <svg className={styles.koreaMap} width={width} height={height} ref={svg} id="Total" onClick={click}>
       <path
         className="prefix__land prefix__Seoul"
         id="Seoul"

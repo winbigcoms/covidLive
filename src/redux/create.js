@@ -14,7 +14,7 @@ export let history = createBrowserHistory();
 
 const token = TokenService.tokenGet();
 const nickName = TokenService.nickNameGet()
-console.log(token)
+console.log(nickName)
 
 const SagaMiddleware = createSagaMiddleware();
 
@@ -22,7 +22,7 @@ const Store = () => {
   const str = createStore(
     reducer(history),
     {
-      auth: {
+      authReducer: {
         token: token,
         loading: false,
         error: null,

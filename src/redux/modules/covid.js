@@ -64,13 +64,13 @@ export const startGetCovidData = ()=>({
 function* startGetCovidDataSage(){
   try{
     yield put(start());
-    // const token =  yield select((state)=>state.auth.token);
-    // if(token===null) {
-    //   yield put(push("/signin"));
-    //   const error = "비로그인"
-    //   yield put(fail(error));
-    //   return
-    // }
+    const token =  yield select((state)=>state.authReducer.token);
+    if(token===null) {
+      yield put(push("/signin"));
+      const error = "비로그인"
+      yield put(fail(error));
+      return
+    }
     console.log("ss")
     const covidData = yield call(CovidService.getCityData);
     const total = covidData.pop();

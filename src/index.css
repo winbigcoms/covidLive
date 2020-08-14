@@ -17,6 +17,7 @@ code {
 
 .prefix__land
 {
+  cursor: pointer;
   fill: #CCCCCC;
   fill-opacity: 1;
   stroke:white;

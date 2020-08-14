@@ -4,7 +4,7 @@ import MemoKorea2 from '../component/Korea2';
 import { useDispatch, useSelector } from 'react-redux';
 import { useCallback } from 'react';
 import { startGetCovidData } from '../redux/modules/covid';
-export function MapContainer() {
+export function MapContainer({setSelect}) {
 
   const dispatch = useDispatch();
   const covidData = useSelector(state=> state.covidData.city);
@@ -13,7 +13,6 @@ export function MapContainer() {
     dispatch(startGetCovidData());
   },[dispatch]);
 
-
   return (
     <MemoKorea2 
       width={600} 
@@ -21,6 +20,7 @@ export function MapContainer() {
       covidData={covidData} 
       total={total}
       getCovidData={getCovidData} 
+      setSelect={setSelect}
     />
   );
 };

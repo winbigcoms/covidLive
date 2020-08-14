@@ -63,7 +63,7 @@ export default function authReducer (state = initialState, action) {
       return state;
   }
 }
-// saga
+// thunk
 
 export const loginThunk = (email, password, history) => {
   return async (dispatch) => {
