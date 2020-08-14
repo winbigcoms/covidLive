@@ -9,7 +9,6 @@ export default class SigninService {
       email,
       password,
     })
-    console.log(response)
     return response.data.token
   }
 

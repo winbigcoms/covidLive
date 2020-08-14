@@ -11,21 +11,27 @@ function Korea2({width,height,covidData,total,getCovidData,setSelect}) {
   // 클래스 추가해주는 함수
   useEffect(()=>{
     const go = ()=>{
-      const useData = covidData.map(data =>({
-          gubun:data.gubunEn,
-          defCnt:data.defCnt,
-          percent : parseFloat(data.defCnt/total.defCnt*100).toFixed(2)
-        })
+      const useData = covidData.map(data =>{
+          return {
+            gubun:data.gubunEn,
+            defCnt:data.defCnt,
+            percent : parseFloat(data.defCnt/total.defCnt*100).toFixed(2)
+          }
+        }
       );
       svg.current.childNodes.forEach(node=>{
         useData.forEach((data,idx)=>{
           if(idx === covidData.length) return;
           if(data.gubun === node.id) {
-            if(data.percent <= 9) {
+            if(data.percent <= 0.5) {
               node.classList.add("low")
-            }else if(data.percent <= 20){
+            }else if(data.percent <= 1){
+              node.classList.add("lowMid")
+            }else if(data.percent <= 3){
               node.classList.add("mid")
-            }else if(data.percent <= 100) {
+            }else if(data.percent <= 12){
+              node.classList.add("midHigh")
+            }else if(data.percent <= 100){
               node.classList.add("high")
             }
           }

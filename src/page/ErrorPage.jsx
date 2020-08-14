@@ -3,7 +3,8 @@ import React from 'react';
 export function ErrorPage() {
   return (
     <div>
-      에러낫대요
+      <h1>에러났다.</h1>
+      
     </div>
   );
 };

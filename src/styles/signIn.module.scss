@@ -1,0 +1,58 @@
+.sign_body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(./signinBackground.jpg) no-repeat;
+  background-size: cover;
+}
+form {
+  width: 400px;
+  height: 100vh;
+  margin: 100px auto;
+}
+
+.h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.h1 .letter{
+  text-align: center;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+// .bar {
+//   margin: 20px auto;
+//   width: 200px;
+//   height: 8px;
+//   background: linear-gradient(to right, rgb(128, 59, 50), rgb(221, 180, 155));
+// }
+
+.sign_id p{
+  margin-left: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.sign_pw p{
+  margin-left: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.sign_btn {
+  display: block;
+  margin: 20px auto;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(188, 201, 207);
+}
+
+.sign_input {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
