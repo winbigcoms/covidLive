@@ -7,7 +7,6 @@ import { routerMiddleware } from 'connected-react-router';
 import rootSaga from "./middleware/Saga"
 import reducer from "./modules/reducer"
 import TokenService from '../services/TokenService'
-import { useSelector } from 'react-redux';
 
 
 export let history = createBrowserHistory();
