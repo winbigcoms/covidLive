@@ -28,7 +28,8 @@ function loginFail(error) {
   }
 }
 
-export function logOut() {
+
+export function logout() {
   return{
     type : LOGOUT
   }
@@ -92,6 +93,20 @@ export const loginThunk = (email, password, history) => {
     }
   }
 
+}
+
+export const logoutThunk = (history) => {
+  return async (dispatch) => {
+    try{
+      const token = TokenService.tokenGet()
+      SigninService.logout(token)
+      TokenService.remove();
+      dispatch(logout());
+      history.push('/signin')
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }
 
 // export default loginThunk;
