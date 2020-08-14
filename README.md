@@ -13,7 +13,8 @@
   배준선 : 로그인
   
 ## 파일 구조
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cbd5dbb4-8937-4db4-9bd0-42d165d93e4a/src1.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cbd5dbb4-8937-4db4-9bd0-42d165d93e4a/src1.png)
+![src1](https://user-images.githubusercontent.com/54830773/90244426-b5bab300-de6b-11ea-82cf-6cacde5309c7.png)
+
 
 ## 사용 라이브러리
 1. react
