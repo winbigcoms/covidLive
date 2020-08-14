@@ -5,7 +5,7 @@ import { useSelector }from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
 export function SigninPage() {
-  const token = useSelector((str) => str.auth.token);
+  const token = useSelector((state) => state.authReducer.token);
   if (token !== null) {
     return <Redirect to="/" />;
   }
