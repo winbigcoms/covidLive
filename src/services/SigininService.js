@@ -9,6 +9,7 @@ export default class TokenService {
       email,
       password,
     })
+    console.log(response)
     return response.data.token
   }
 }

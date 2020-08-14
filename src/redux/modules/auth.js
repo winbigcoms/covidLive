@@ -12,10 +12,11 @@ function loginStart() {
   }
 }
 
-function loginSuccess(token) {
+function loginSuccess(token, nickname) {
   return {
     type : LOGIN_SUCCESS,
-    token
+    token,
+    nickname
   }
 }
 
@@ -32,27 +33,31 @@ const initialState = {
   token: null,
   loding: false,
   error: null,
+  nickname: null
 }
 
-function reducer (state = initialState, action) {
+export default function authReducer (state = initialState, action) {
   switch (action.type) {
     case LOGIN_START :
       return {
         token: null,
         loading: true,
         error: null,
+        nickname: null,
       }
     case LOGIN_SUCCESS :
       return {
         token: action.token,
         loading: true,
         error: null,
+        nickname: action.nickname,
       }
     case LOGIN_FAIL :
       return {
         token: null,
         loading: false,
         error: action.error,
+        nickname: null,
       }
     default:
       return state;
@@ -66,7 +71,7 @@ export const loginThunk = (email, password, history) => {
       dispatch(loginStart());
       const token = await SigninService.login(email, password);
       TokenService.save(token);
-      dispatch(loginSuccess(token))
+      dispatch(loginSuccess(token, email))
       history.push('/')
     } catch (error) {
       dispatch(loginFail(error))
@@ -74,3 +79,5 @@ export const loginThunk = (email, password, history) => {
   }
 
 }
+
+// export default loginThunk;
