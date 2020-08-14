@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SigninComponent() {
+export default function SigninComponent(login) {
   const emailRef = React.useRef()
   const passwordRef = React.useRef()
 
@@ -12,12 +12,14 @@ export default function SigninComponent() {
       <p>
         <input type="password" ref={passwordRef}/>
       </p>
-      <button onClick={login}>LogIn</button>
+      <button onClick={click}>LogIn</button>
     </div>
   )
    
-  function login () {
-    
+  function click () {
+    const email = emailRef.current.value
+    const password = passwordRef.current.value
+    login(email, password)
   }
 
 }
