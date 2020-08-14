@@ -44,8 +44,6 @@ function Korea2({width,height,covidData,total,getCovidData,setSelect}) {
   function click(e){
     setSelect(e.target.id);
   }
-
-
   return (
     <svg className={styles.koreaMap} width={width} height={height} ref={svg} id="Total" onClick={click}>
       <path

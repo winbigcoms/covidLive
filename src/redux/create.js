@@ -13,7 +13,6 @@ export let history = createBrowserHistory();
 
 const token = TokenService.tokenGet();
 const nickName = TokenService.nickNameGet()
-console.log('스토어', nickName)
 
 const SagaMiddleware = createSagaMiddleware();
 

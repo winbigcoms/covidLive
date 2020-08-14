@@ -71,13 +71,10 @@ function* startGetCovidDataSage(){
       yield put(fail(error));
       return
     }
-    console.log("ss")
     const covidData = yield call(CovidService.getCityData);
     const total = covidData.pop();
-    console.log(covidData, total)
     yield put(success(covidData,total));
   }catch(error){
-    console.log("1")
     yield put(fail(error));
   }
 }
