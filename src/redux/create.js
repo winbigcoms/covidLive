@@ -19,7 +19,7 @@ const Store = () => {
   const str = createStore(
     reducer(history),
     {
-      auth: {
+      authReducer: {
         token: token,
         loading: false,
         error: null,
