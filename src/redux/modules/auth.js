@@ -85,8 +85,9 @@ export const loginThunk = (email, password, history) => {
     try {
       dispatch(loginStart());
       const token = await SigninService.login(email, password);
-      TokenService.save(token, email);
-      dispatch(loginSuccess(token, email))
+      const nickName = email.split('@')[0];
+      TokenService.save(token, nickName);
+      dispatch(loginSuccess(token, nickName))
       history.push('/')
     } catch (error) {
       dispatch(loginFail(error))
