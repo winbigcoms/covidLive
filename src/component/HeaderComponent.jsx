@@ -4,6 +4,7 @@ import "../styles/covidLive.svg";
 import Logo from "../styles/covidLive.jpg";
 import styles from "../styles/header.module.scss"
 export function HeaderComponent({nickName}) {
+  console.log(nickName)
   return (
     <header className={styles.header}>
       <span>

@@ -7,11 +7,14 @@ import { routerMiddleware } from 'connected-react-router';
 import rootSaga from "./middleware/Saga"
 import reducer from "./modules/reducer"
 import TokenService from '../services/TokenService'
+import { useSelector } from 'react-redux';
+
 
 export let history = createBrowserHistory();
 
-const token = TokenService.get();
-console.log(token)
+const token = TokenService.tokenGet();
+const nickName = TokenService.nickNameGet()
+console.log(nickName)
 
 const SagaMiddleware = createSagaMiddleware();
 
@@ -23,7 +26,7 @@ const Store = () => {
         token: token,
         loading: false,
         error: null,
-        nickname: null,
+        nickname: nickName,
       }
     },
     composeWithDevTools(

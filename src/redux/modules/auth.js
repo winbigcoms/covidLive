@@ -70,7 +70,7 @@ export const loginThunk = (email, password, history) => {
     try {
       dispatch(loginStart());
       const token = await SigninService.login(email, password);
-      TokenService.save(token);
+      TokenService.save(token, email);
       dispatch(loginSuccess(token, email))
       history.push('/')
     } catch (error) {
