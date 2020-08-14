@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-
+import styles from "../styles/koreaMap.module.scss";
 function Korea2({width,height,covidData,total,getCovidData}) {
   // const {width,height,useData} = props;
   const svg = useRef(null);
@@ -40,10 +40,8 @@ function Korea2({width,height,covidData,total,getCovidData}) {
   }
 
 
- 
-
   return (
-    <svg width={width} height={height} ref={svg} onClick={click}>
+    <svg className={styles.koreaMap} width={width} height={height} ref={svg} onClick={click}>
       <path
         className="prefix__land prefix__Seoul"
         id="Seoul"

@@ -1,0 +1,13 @@
+.HomeContainer {
+  box-sizing: border-box;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding-top: 90px;
+}
+li{
+  list-style: none;
+  margin-left: 30px;
+}
