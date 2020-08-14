@@ -5,6 +5,7 @@ import TokenService from '../../services/TokenService'
 const LOGIN_START = 'LOGIN_START'
 const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 const LOGIN_FAIL = 'LOGIN_FAIL'
+const LOGOUT = 'LOGOUT'
 
 function loginStart() {
   return {
@@ -24,6 +25,12 @@ function loginFail(error) {
   return {
     type : LOGIN_FAIL,
     error
+  }
+}
+
+function logOut() {
+  return{
+    type : 'LOGOUT'
   }
 }
 
@@ -57,6 +64,13 @@ export default function authReducer (state = initialState, action) {
         token: null,
         loading: false,
         error: action.error,
+        nickname: null,
+      }
+    case LOGOUT :
+      return {
+        token: null,
+        loading: false,
+        error: null,
         nickname: null,
       }
     default:
