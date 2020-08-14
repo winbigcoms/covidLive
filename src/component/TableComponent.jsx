@@ -8,7 +8,7 @@ export function TableComponent({total,cityData,select}) {
       <table className={styles.table}>
         <thead>
           <tr>
-           <th colSpan="3">{total.gubun === "합계"? "전국현황":""}</th>
+            <th colSpan="3">{total.stdDay.slice(0,14)}{total.gubun === "합계"? "전국 현황":""}</th>
          </tr>
         </thead>
         <tbody>
@@ -43,11 +43,11 @@ export function TableComponent({total,cityData,select}) {
         </tbody>    
       </table>
     ):(
-      cityData.filter(city => city.gubunEn === select).map(selectCity => (
-      <table className={styles.table}>
+      cityData.filter(city => city.gubunEn === select).map((selectCity,idx) => (
+      <table className={styles.table} key={idx}>
         <thead>
           <tr>
-            <th colSpan="3">{selectCity.gubun}</th>
+            <th colSpan="3">{total.stdDay.slice(0,14)}{selectCity.gubun} 현황</th>
           </tr>
         </thead>
         <tbody>

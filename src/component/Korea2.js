@@ -12,7 +12,6 @@ function Korea2({width,height,covidData,total,getCovidData,setSelect}) {
   useEffect(()=>{
     const go = ()=>{
       const useData = covidData.map(data =>{
-        console.log(parseFloat(data.defCnt/total.defCnt*100).toFixed(2));
           return {
             gubun:data.gubunEn,
             defCnt:data.defCnt,

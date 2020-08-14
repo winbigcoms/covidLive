@@ -28,9 +28,9 @@ function loginFail(error) {
   }
 }
 
-function logOut() {
+export function logOut() {
   return{
-    type : 'LOGOUT'
+    type : LOGOUT
   }
 }
 
