@@ -36,3 +36,12 @@
 15. http-proxy-middleware
 16. react-scripts
 17. svgr
+
+## 결과
+![image](https://user-images.githubusercontent.com/54830773/97266458-d5a72380-186b-11eb-989e-b5f942d60e1d.png)
+![image](https://user-images.githubusercontent.com/54830773/97266524-ed7ea780-186b-11eb-83c8-748032f7575c.png)
+
+## 배운점
+- module.scss를 사용함으로 이전의 웹팩 번들링을 하면서 생긴 문제들을 피해갈 수 있었다.
+- chart.js와 svg를 이용하여 데이터 시각화를 통해 다양한 인터렉티브 웹을 만들수 있다는 것을 느꼈다.
+- 공공API를 사용하게 되면서 Document를 꼼꼼히 읽고 이해하는 시간을 가짐으로 무리없이 사용했지만, 데이터의 직관성이 떨어지는 것을 느꼈다.
