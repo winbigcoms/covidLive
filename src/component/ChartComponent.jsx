@@ -23,9 +23,6 @@ export function ChartComponent({ cityData, getCovidData }) {
     "black",
     "orchid",
   ];
-  // useEffect(() => {
-  //   getCovidData();
-  // }, [getCovidData]);
   useEffect(() => {
     const myChart = new Chart(canvas.current.getContext("2d"), {
       type: "bar",

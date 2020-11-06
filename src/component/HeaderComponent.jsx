@@ -12,7 +12,7 @@ export function HeaderComponent({ nickName, logout }) {
       </span>
       <ul className={styles.HeaderNavigation}>
         <li>
-          <Link to="/compare">차트보기</Link>
+          <Link to="/compare">차트로 보기</Link>
         </li>
         <li>{nickName}님</li>
         <li>
