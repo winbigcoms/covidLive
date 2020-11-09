@@ -37,6 +37,10 @@
 16. react-scripts
 17. svgr
 
+## 실행 방법
+1. 클론 후 npm ci
+2. npm start 혹은 yarn start
+
 ## 결과
 ![image](https://user-images.githubusercontent.com/54830773/97266458-d5a72380-186b-11eb-989e-b5f942d60e1d.png)
 ![image](https://user-images.githubusercontent.com/54830773/97266524-ed7ea780-186b-11eb-83c8-748032f7575c.png)
