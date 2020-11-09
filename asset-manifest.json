@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/covidLive/static/css/main.b8e3e686.chunk.css",
+    "main.js": "/covidLive/static/js/main.e4968e4b.chunk.js",
+    "main.js.map": "/covidLive/static/js/main.e4968e4b.chunk.js.map",
+    "runtime-main.js": "/covidLive/static/js/runtime-main.e0682996.js",
+    "runtime-main.js.map": "/covidLive/static/js/runtime-main.e0682996.js.map",
+    "static/js/2.da1e2368.chunk.js": "/covidLive/static/js/2.da1e2368.chunk.js",
+    "static/js/2.da1e2368.chunk.js.map": "/covidLive/static/js/2.da1e2368.chunk.js.map",
+    "index.html": "/covidLive/index.html",
+    "precache-manifest.371803f2cd54fc1c1efc853a5689b957.js": "/covidLive/precache-manifest.371803f2cd54fc1c1efc853a5689b957.js",
+    "service-worker.js": "/covidLive/service-worker.js",
+    "static/css/main.b8e3e686.chunk.css.map": "/covidLive/static/css/main.b8e3e686.chunk.css.map",
+    "static/js/2.da1e2368.chunk.js.LICENSE.txt": "/covidLive/static/js/2.da1e2368.chunk.js.LICENSE.txt",
+    "static/media/covidLive.jpg": "/covidLive/static/media/covidLive.e51852e4.jpg",
+    "static/media/signIn.module.scss": "/covidLive/static/media/signinBackground.86a36f22.jpg",
+    "static/media/notFound.module.scss": "/covidLive/static/media/whereRUComing.3711f0a3.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e0682996.js",
+    "static/js/2.da1e2368.chunk.js",
+    "static/css/main.b8e3e686.chunk.css",
+    "static/js/main.e4968e4b.chunk.js"
+  ]
+}
