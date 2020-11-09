@@ -1,4 +1,3 @@
-// @flow
 import  React, { useCallback } from 'react';
 import { HeaderComponent } from '../component/HeaderComponent';
 import { useSelector, useDispatch } from 'react-redux';

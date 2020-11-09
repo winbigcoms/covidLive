@@ -2,8 +2,6 @@ import React from 'react'
 import styles from '../styles/signIn.module.scss'
 
 export default function SigninComponent({login}) {
-  // const [state, setState] = useState({email:''})
-
   const buttonRef = React.useRef();
   const emailRef = React.useRef();
   const passwordRef = React.useRef()

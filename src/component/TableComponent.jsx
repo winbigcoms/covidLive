@@ -1,10 +1,8 @@
-// @flow
 import React from 'react';
 import styles from "../styles/dataTable.module.scss";
 export function TableComponent({total,cityData,select}) {
-
   return (
-    select === total.gubunEn || undefined ? (
+    select === total.gubunEn ? (
       <table className={styles.table}>
         <thead>
           <tr>
