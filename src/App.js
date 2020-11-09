@@ -16,7 +16,7 @@ function App() {
         <Switch>
           <Route path="/signin" component={SigninPage} />
           <Route path="/compare" exact component={ChartPage} />
-          <Route path="/covidLive" exact component={HomePage} />
+          <Route path="/" exact component={HomePage} />
           <Route component={NotFoundPage} />
         </Switch>
       </ConnectedRouter>
