@@ -28,9 +28,6 @@ function Korea2({width,height,covidData,getCovidData,setSelect,select}) {
     }else if(percentNum <= 100){
       color.color="high"
     }
-    
-    // if(select===id) return classNames(styles["prefix__land"],styles[color.color],styles.select);
-    // return classNames(styles["prefix__land"],styles[color.color])
     return select === id ?classNames(styles["prefix__land"],styles[color.color],styles.select) : classNames(styles["prefix__land"],styles[color.color])
   }
 
